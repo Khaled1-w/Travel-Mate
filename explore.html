@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore — TravelMate</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+<a href="index.html" class="logo"><img src="images/logo.png" alt="TravelMate logo">TravelMate <span>...</span></a>    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="explore.html">Explore</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="trip-planner.html">Trip Planner</a></li>
+      <li><a href="trips.html">Book a Trip</a></li>
+      <li><a href="bookings.html">My Bookings</a></li>
+      <li><a href="favorites.html">Favorites <span class="fav-count">0</span></a></li>
+      <li><a href="travelling-tips.html">Travel Tips</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-outline btn-sm" id="auth-link">Login</a>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Explore</div>
+    <h1>Search for a destination</h1>
+    <p>Filter by travel type and budget to narrow things down to places worth your time.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="filter-bar">
+      <div class="field">
+        <label for="q">Search</label>
+        <input type="text" id="q" placeholder="Try “Jordan” or “desert”">
+      </div>
+      <div class="field">
+        <label for="type">Travel type</label>
+        <select id="type">
+          <option value="">All types</option>
+          <option value="historical">Historical</option>
+          <option value="beach">Beach</option>
+          <option value="desert">Desert</option>
+          <option value="adventure">Adventure</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="budget">Budget</label>
+        <select id="budget">
+          <option value="">Any budget</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+      <button class="btn btn-outline btn-sm" id="reset">Reset filters</button>
+    </div>
+
+    <p class="results-count" id="count"></p>
+    <div class="grid grid-3" id="results"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="logo" style="color:white;">TravelMate</a>
+      <p style="margin-top:14px;color:#b9c9df;font-size:0.9rem;max-width:32ch;">Your mate for every adventure.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="explore.html">Search</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="trip-planner.html">Trip Planner</a>
+      <a href="favorites.html">Favorites</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="about.html">About us</a>
+      <a href="travelling-tips.html">Travel tips</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h4>Account</h4>
+      <a href="login.html">Login</a>
+      <a href="logout.html">Logout</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© <span id="year"></span> TravelMate — Summer Training Project</div>
+</footer>
+
+<script src="destinations-data.js"></script>
+<script src="main.js"></script>
+<script src="explore.js"></script>
+</body>
+</html>

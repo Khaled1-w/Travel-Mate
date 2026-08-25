@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logged out — TravelMate</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" style="justify-content:center;">
+<a href="index.html" class="logo"><img src="images/logo.png" alt="TravelMate logo">TravelMate <span>...</span></a>  </nav>
+</header>
+
+<section class="block" style="text-align:center;padding:100px 20px;">
+  <div class="wrap">
+    <div class="eyebrow">See you soon</div>
+    <h1>You've been logged out</h1>
+    <p style="color:var(--muted);max-width:46ch;margin:14px auto 26px;">Thanks for spending time with TravelMate. Come back any time to keep planning your trip.</p>
+    <a href="login.html" class="btn btn-primary">Log back in</a>
+    <a href="index.html" class="btn btn-outline" style="margin-left:10px;">Back to home</a>
+  </div>
+</section>
+
+<footer class="site-footer simple">
+  <div class="footer-bottom" style="border:none;margin:0;padding:0;">© <span id="year"></span> TravelMate</div>
+</footer>
+
+<script src="main.js"></script>
+<script>localStorage.removeItem("loggedIn");</script>
+</body>
+</html>
