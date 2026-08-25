@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Tips — TravelMate</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="tips.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="logo">TravelMate <span>Where Every Journey Begins</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="explore.html">Explore</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="trip-planner.html">Trip Planner</a></li>
+      <li><a href="trips.html">Book a Trip</a></li>
+      <li><a href="bookings.html">My Bookings</a></li>
+      <li><a href="favorites.html">Favorites <span class="fav-count">0</span></a></li>
+      <li><a href="travelling-tips.html" class="active">Travel Tips</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+    </div>
+  </nav>
+</header>
+
+<section class="tips-hero">
+  <div class="tips-hero-content">
+    <h1>Travel smart,<span>travel better</span></h1>
+    <p>Get useful travel tips and discover what you need to know before visiting your destination.</p>
+  </div>
+  <div class="destination-box">
+    <h3>Choose Your Destination</h3>
+    <div class="destination-selection">
+     <select id="destinationselect">
+       <option value="">Select a country</option>
+      <option value="egypt">🇪🇬 Egypt</option>
+      <option value="jordan">🇯🇴 Jordan</option>
+      <option value="morocco">🇲🇦 Morocco</option>
+       <option value="turkey">🇹🇷 Turkey</option>
+      <option value="greece">🇬🇷 Greece</option>
+     </select>
+      <button id="getTipsBtn">Get Travel Tips</button>
+    </div>
+  </div>
+</section>
+
+<section class="packing-section">
+  <div class="section-heading">
+    <i class="fa-solid fa-suitcase"></i>
+    <h2>What to pack</h2>
+    <p>Click on a category to see what you should pack</p>
+  </div>
+  <div class="packing-container">
+
+    <div class="packing-item active">
+      <button class="packing-header">
+        <div class="packing-title"><i class="fa-solid fa-shirt"></i><h3>Clothing</h3></div>
+        <i class="fa-solid fa-chevron-up arrow"></i>
+      </button>
+      <div class="packing-content">
+        <div class="packing-list">
+          <p><i class="fa-regular fa-circle-check"></i>Light and breathable clothes</p>
+          <p><i class="fa-regular fa-circle-check"></i>Comfortable walking shoes</p>
+          <p><i class="fa-regular fa-circle-check"></i>Socks and underwear</p>
+          <p><i class="fa-regular fa-circle-check"></i>Rain jacket or umbrella</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="packing-item">
+      <button class="packing-header">
+        <div class="packing-title"><i class="fa-solid fa-bottle-droplet"></i><h3>Toiletries</h3></div>
+        <i class="fa-solid fa-chevron-down arrow"></i>
+      </button>
+      <div class="packing-content">
+        <div class="packing-list">
+          <p><i class="fa-regular fa-circle-check"></i>Toothbrush and toothpaste</p>
+          <p><i class="fa-regular fa-circle-check"></i>Shampoo and soap</p>
+          <p><i class="fa-regular fa-circle-check"></i>Sunscreen</p>
+          <p><i class="fa-regular fa-circle-check"></i>Personal hygiene items</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="packing-item">
+      <button class="packing-header">
+        <div class="packing-title"><i class="fa-solid fa-plug"></i><h3>Electronics</h3></div>
+        <i class="fa-solid fa-chevron-down arrow"></i>
+      </button>
+      <div class="packing-content">
+        <div class="packing-list">
+          <p><i class="fa-regular fa-circle-check"></i>Phone and charger</p>
+          <p><i class="fa-regular fa-circle-check"></i>Power bank</p>
+          <p><i class="fa-regular fa-circle-check"></i>Travel adapter</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="packing-item">
+      <button class="packing-header">
+        <div class="packing-title"><i class="fa-solid fa-file-lines"></i><h3>Documents</h3></div>
+        <i class="fa-solid fa-chevron-down arrow"></i>
+      </button>
+      <div class="packing-content">
+        <div class="packing-list">
+          <p><i class="fa-regular fa-circle-check"></i>Passport</p>
+          <p><i class="fa-regular fa-circle-check"></i>Visa if required</p>
+          <p><i class="fa-regular fa-circle-check"></i>Flight tickets</p>
+          <p><i class="fa-regular fa-circle-check"></i>Travel insurance</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="packing-item">
+      <button class="packing-header">
+        <div class="packing-title"><i class="fa-solid fa-kit-medical"></i><h3>Health & Safety</h3></div>
+        <i class="fa-solid fa-chevron-down arrow"></i>
+      </button>
+      <div class="packing-content">
+        <div class="packing-list">
+          <p><i class="fa-regular fa-circle-check"></i>Personal medicine</p>
+          <p><i class="fa-regular fa-circle-check"></i>First aid kit</p>
+          <p><i class="fa-regular fa-circle-check"></i>Face masks if needed</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="packing-item">
+      <button class="packing-header">
+        <div class="packing-title"><i class="fa-solid fa-camera"></i><h3>Other Essentials</h3></div>
+        <i class="fa-solid fa-chevron-down arrow"></i>
+      </button>
+      <div class="packing-content">
+        <div class="packing-list">
+          <p><i class="fa-regular fa-circle-check"></i>Water bottle</p>
+          <p><i class="fa-regular fa-circle-check"></i>Travel pillow</p>
+          <p><i class="fa-regular fa-circle-check"></i>Small backpack</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="destination-info">
+  <div class="section-heading">
+    <i class="fa-solid fa-earth-americas"></i>
+    <h2>Must Know About Your Destination</h2>
+    <p>Be prepared and stay informed</p>
+  </div>
+  <div class="info-box">
+    <div class="info-tabs">
+      <button class="tab-btn active" data-tab="culture"><i class="fa-solid fa-people-group"></i>Culture &amp; Etiquette</button>
+      <button class="tab-btn" data-tab="language"><i class="fa-solid fa-comment-dots"></i>Language</button>
+      <button class="tab-btn" data-tab="currency"><i class="fa-solid fa-money-bill"></i>Currency</button>
+      <button class="tab-btn" data-tab="weather"><i class="fa-solid fa-cloud-sun"></i>Weather</button>
+      <button class="tab-btn" data-tab="safety"><i class="fa-solid fa-shield-halved"></i>Safety</button>
+      <button class="tab-btn" data-tab="emergency"><i class="fa-solid fa-phone"></i>Emergency Numbers</button>
+    </div>
+    <div class="info-content">
+      <div class="destination-image">
+        <img src="images/egypt.jpg" alt="Travel around the world">
+      </div>
+      <div class="info-text">
+        <h3 id="infoTitle">Choose a destination to see the information</h3>
+        <p id="infoDescription">Select a city from the destination menu to discover important travel information.</p>
+        <ul id="infoList"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="emergency-section">
+  <div class="section-heading">
+    <i class="fa-solid fa-phone"></i>
+    <h2 id="emergencyTitle">Emergency Numbers</h2>
+    <p id="emergencyDescription">Select a destination to see important emergency numbers.</p>
+  </div>
+  <div class="emergency-container" id="emergencyContainer"></div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="logo" style="color:white;">TravelMate</a>
+      <p style="margin-top:14px;color:#b9c9df;font-size:0.9rem;max-width:32ch;">We help you explore the world with confidence and ease.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="explore.html">Search</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="trip-planner.html">Trip Planner</a>
+      <a href="favorites.html">Favorites</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="about.html">About us</a>
+      <a href="travelling-tips.html">Travel tips</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h4>Account</h4>
+      <a href="login.html">Login</a>
+      <a href="logout.html">Logout</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© <span id="year"></span> TravelMate — Summer Training Project</div>
+</footer>
+
+<script src="main.js"></script>
+<script src="tips.js" defer></script>
+</body>
+</html>
