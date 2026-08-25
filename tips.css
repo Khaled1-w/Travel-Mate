@@ -1,0 +1,263 @@
+/* Page-specific styles for travelling-tips.html.
+   Header/nav/footer are handled by style.css — this file only
+   covers the hero, packing accordion, info tabs and emergency box. */
+
+.tips-hero {
+    min-height: 390px;
+    position: relative;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(236, 247, 255, 0.98) 0%,
+            rgba(236, 247, 255, 0.93) 22%,
+            rgba(236, 247, 255, 0.60) 45%,
+            rgba(236, 247, 255, 0.10) 72%
+        ),
+        url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 55px 5%;
+}
+.tips-hero-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+.tips-hero-content h1 {
+    color: #102858;
+    font-size: 40px;
+    line-height: 1.05;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+.tips-hero-content h1 span {
+    display: block;
+    color: #2588f7;
+}
+.tips-hero-content p {
+    width: 350px;
+    max-width: 100%;
+    color: #16294c;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.destination-box {
+    width: 450px;
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 10px;
+    padding: 18px 20px;
+    box-shadow: 0 10px 30px rgba(16, 40, 88, 0.15);
+    margin-top: -20px;
+}
+.destination-box h3 {
+    color: #102858;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.destination-selection {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.destination-selection select {
+    height: 36px;
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #2588f7;
+    border-radius: 7px;
+    padding: 0 10px;
+    color: #25344f;
+    font-size: 12px;
+    outline: none;
+}
+.destination-selection select:focus {
+    box-shadow: 0 0 0 3px rgba(37, 136, 247, 0.12);
+}
+.destination-selection button {
+    height: 36px;
+    border: none;
+    border-radius: 9px;
+    padding: 0 17px;
+    background: #2588f7;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.destination-selection button:hover {
+    background: #126fd1;
+    transform: translateY(-1px);
+}
+.section-heading {
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 18px;
+}
+.section-heading i {
+    color: #2588f7;
+    font-size: 23px;
+    margin-right: 8px;
+}
+.section-heading h2 {
+    display: inline-block;
+    color: #102858;
+    font-size: 22px;
+    vertical-align: middle;
+}
+.section-heading p {
+    display: block;
+    margin-top: 3px;
+    color: #68758a;
+    font-size: 11px;
+}
+.packing-section {
+    width: 90%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+.packing-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+.packing-item {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(16, 40, 88, 0.08);
+    border: 1px solid #edf1f6;
+}
+.packing-item:nth-child(6) { grid-column: 1 / -1; }
+.packing-header {
+    width: 100%;
+    min-height: 54px;
+    border: none;
+    background: #ffffff;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #102858;
+}
+.packing-item.active .packing-header {
+    background: #edf6ff;
+    border: 1px solid #c7defc;
+}
+.packing-title { display: flex; align-items: center; gap: 13px; }
+.packing-title i { width: 25px; color: #2588f7; font-size: 20px; text-align: center; }
+.packing-item:nth-child(2) .packing-title i { color: #20b89f; }
+.packing-item:nth-child(3) .packing-title i { color: #7144e8; }
+.packing-item:nth-child(4) .packing-title i { color: #f2a12d; }
+.packing-item:nth-child(5) .packing-title i { color: #ef4242; }
+.packing-item:nth-child(6) .packing-title i { color: #168b99; }
+.packing-title h3 { font-size: 14px; font-weight: 700; }
+.arrow { color: #69768b; font-size: 13px; }
+.packing-item.active .arrow { color: #2588f7; }
+.packing-content { display: none; background: #ffffff; padding: 12px 22px 17px; }
+.packing-item.active .packing-content { display: block; }
+.packing-list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 30px; row-gap: 7px; }
+.packing-list p { color: #46536a; font-size: 11px; display: flex; align-items: center; gap: 7px; }
+.packing-list p i { color: #2588f7; font-size: 13px; }
+
+.destination-info { width: 90%; max-width: 1120px; margin: 40px auto 0; }
+.info-box {
+    background: #ffffff;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(16, 40, 88, 0.08);
+    border: 1px solid #edf1f5;
+}
+.info-tabs {
+    width: 100%;
+    min-height: 48px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border-bottom: 1px solid #e7ecf2;
+}
+.tab-btn {
+    position: relative;
+    border: none;
+    background: #ffffff;
+    color: #58657a;
+    font-size: 10px;
+    cursor: pointer;
+    padding: 0 7px;
+    transition: 0.2s ease;
+}
+.tab-btn i { color: #2588f7; margin-right: 5px; }
+.tab-btn:hover { color: #2588f7; }
+.tab-btn.active { color: #2588f7; font-weight: 700; }
+.tab-btn.active::after {
+    content: "";
+    position: absolute;
+    left: 18%; right: 18%; bottom: 0;
+    height: 2px;
+    background: #2588f7;
+}
+.info-content { min-height: 225px; display: grid; grid-template-columns: 34% 66%; padding: 20px; }
+.destination-image { display: flex; align-items: center; justify-content: center; }
+.destination-image img { width: 260px; height: 180px; object-fit: cover; border-radius: 5px; }
+.info-text { padding: 7px 25px; }
+.info-text h3 { color: #102858; font-size: 16px; margin-bottom: 9px; }
+.info-text p { color: #536078; font-size: 11px; line-height: 1.65; margin-bottom: 10px; }
+.info-text ul { list-style: none; padding: 0; margin: 0; }
+.info-text li { color: #46536b; font-size: 10px; margin: 8px 0; position: relative; padding-left: 20px; }
+.info-text li::before {
+    content: "✓";
+    position: absolute; left: 0; top: 0;
+    width: 13px; height: 13px; border-radius: 50%;
+    background: #2588f7; color: white;
+    text-align: center; line-height: 13px; font-size: 8px;
+}
+
+.emergency-section { width: 90%; max-width: 1120px; margin: 40px auto 0; }
+.emergency-section .section-heading { display: none; }
+.emergency-container {
+    min-height: 85px;
+    padding: 15px 20px;
+    background: #effbf9;
+    border: 1px solid #91ddd2;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.emergency-container > div { flex: 1; text-align: center; border-left: 1px solid #d2e7e4; padding: 0 12px; }
+.emergency-container > div:first-child { border-left: none; }
+.emergency-container i { color: #148e80; font-size: 18px; margin-bottom: 3px; }
+.emergency-container p { color: #526073; font-size: 9px; margin: 2px 0; }
+.emergency-container strong, .emergency-container b { display: block; color: #102858; font-size: 15px; }
+
+.fa-solid, .fa-regular, .fa-brands { display: inline-block; }
+
+@media (max-width: 1050px) {
+    .tips-hero { padding-left: 4%; padding-right: 4%; }
+}
+@media (max-width: 800px) {
+    .tips-hero { min-height: 500px; padding: 45px 6%; background-position: center; }
+    .tips-hero-content h1 { font-size: 34px; }
+    .destination-box { width: 100%; max-width: 430px; margin-top: 20px; }
+    .packing-container { grid-template-columns: 1fr; }
+    .packing-item:nth-child(6) { grid-column: auto; }
+    .info-tabs { grid-template-columns: repeat(3, 1fr); }
+    .info-content { grid-template-columns: 1fr; }
+    .destination-image { margin-bottom: 10px; }
+    .info-text { padding: 10px; }
+}
+@media (max-width: 500px) {
+    .tips-hero-content p { width: 100%; }
+    .destination-selection { flex-direction: column; }
+    .destination-selection select, .destination-selection button { width: 100%; }
+    .packing-list { grid-template-columns: 1fr; }
+    .info-tabs { grid-template-columns: 1fr 1fr; }
+    .info-content { padding: 12px; }
+    .destination-image img { width: 220px; height: 160px; }
+    .emergency-container { flex-direction: column; gap: 15px; }
+    .emergency-container > div { width: 100%; border-left: none; border-top: 1px solid #d2e7e4; padding-top: 10px; }
+    .emergency-container > div:first-child { border-top: none; }
+}
